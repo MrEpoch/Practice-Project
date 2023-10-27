@@ -12,6 +12,15 @@ export default {
           200: '#282828',
           100: '#B3B3B3',
         }
+      },
+      keyframes: {
+        slowSpin: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        }
+      },
+      animation: {
+        slowSpin: 'slowSpin 240s linear infinite'
       }
     },
   },

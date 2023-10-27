@@ -10,7 +10,7 @@
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="/" class="flex items-center">
       <img src={Logo} class="h-8 mr-3" alt="InfinitySights VR logo" />
-      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">InfinitySights VR</span>
+      <span class="self-center hidden sm:block sm:text-2xl font-semibold whitespace-nowrap dark:text-white">InfinitySights VR</span>
   </a>
   <div class="flex items-center relative md:order-2">
       <button on:click={() => shownLangs = !shownLangs} type="button" data-dropdown-toggle="language-dropdown-menu" class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
