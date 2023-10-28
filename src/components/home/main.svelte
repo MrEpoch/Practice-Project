@@ -78,14 +78,4 @@
   {/if}
   </div>
   </div>
-  <div class="sm:hidden p-12 gap-6 flex items-center flex-wrap justify-center max-w-screen-xl w-full">
-    {#each cardContent as card}
-    <div class="aspect-square flex items-center justify-center w-[calc(100%-50px)] dark:bg-darkmode-400">
-      <p class="max-[400px]:text-3xl text-5xl flex items-center justify-around gap-5 flex-col font-bold text-center">
-        {card.title}
-        <span class="max-[400px]:text-xl text-2xl">{card.subtitle}</span>
-      </p>
-    </div>
-    {/each}
-  </div>
 </div>

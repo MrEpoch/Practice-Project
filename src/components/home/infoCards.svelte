@@ -29,6 +29,7 @@
 <div class="min-h-screen flex justify-center w-full">
   <div class="flex flex-col
         overflow-hidden items-center text-center lg:py-16 sm:grid grid-cols-1 gap-x-6 gap-y-6
+        p-4
         sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-6">
     {#each cardText as card}
       <a href={card.path} class="aspect-square flex items-center
