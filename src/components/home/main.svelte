@@ -32,7 +32,7 @@
 <div class="flex h-full sm:flex-row flex-col gap-16 items-center w-full">
 	<div class="min-h-screen w-full flex gap-5 items-center">
 		<div
-			class={`sm:flex flex-col items-center justify-center h-full hidden ${
+			class={`md:flex flex-col items-center justify-center h-full hidden ${
 				!animate ? 'w-[7rem]' : ''
 			}`}
 		>
@@ -268,7 +268,7 @@
 				class="z-[1] w-full h-full flex items-center justify-center flex-col sm:pt-36 pt-28 md:pt-48"
 			>
 				<h1
-					class="mb-4 text-center md:text-4xl break-words sm:text-3xl text-4xl max-[450px]:text-2xl lg:text-5xl font-light tracking-tight leading-none text-gray-900 dark:text-white"
+					class="mb-4 text-center  md:text-4xl break-words sm:text-3xl text-4xl max-[450px]:text-2xl lg:text-5xl font-light tracking-tight leading-none text-gray-900 dark:text-white"
 				>
 					Explore <span
 						class="bg-gradient-to-br from-purple-500 to-cyan-600 bg-clip-text text-transparent box-decoration-clone"
@@ -299,7 +299,7 @@
 			</a>
 		</div>
 		<div
-			class={`sm:flex flex-col items-center justify-center h-full hidden ${
+			class={`md:flex flex-col items-center justify-center h-full hidden ${
 				!animate ? 'w-[7rem]' : ''
 			}`}
 		>

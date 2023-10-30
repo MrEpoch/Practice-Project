@@ -3,6 +3,7 @@
 	import { lang, theme } from 'lib/localStorage';
 	import { headerText } from 'lib/texts';
 	import { currentPage } from 'lib/stores';
+	import { MoonIcon } from 'svelte-feather-icons';
 
 	function switchTheme() {
 		$theme.current === 'light' ? ($theme.current = 'dark') : ($theme.current = 'light');
@@ -22,7 +23,7 @@
 		<a href="/" class="flex items-center">
 			<img src={Logo} class="h-8 mr-3" alt="InfinitySights VR logo" />
 			<span
-				class="self-center hidden sm:block sm:text-2xl font-semibold whitespace-nowrap dark:text-white"
+				class="self-center hidden md:block sm:text-xl font-semibold whitespace-nowrap dark:text-white"
 				>InfinitySights VR</span
 			>
 		</a>
@@ -237,17 +238,10 @@
 					>
 				</li>
 				<li>
-					<a
-						href="/contact"
-						on:click={() => (shownMenu = false)}
-						class={$currentPage === 'contact' ? currentLinkStyle : normalLinkStyle}>Contact</a
-					>
-				</li>
-				<li>
 					<button
 						on:click={switchTheme}
 						class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-						>Theme</button
+            ><MoonIcon /></button
 					>
 				</li>
 			</ul>
