@@ -8,19 +8,19 @@ export const products = [
     image: BasicWarrior
   },
   {
-    id: 1,
+    id: 2,
     name: "Advanced Warrior VR",
     price: 100,
     image: BasicWarrior
   },
   {
-    id: 1,
+    id: 3,
     name: "Skilled Warrior VR",
     price: 100,
     image: BasicWarrior
   },  
   {
-    id: 1,
+    id: 4,
     name: "Master Warrior VR",
     price: 100,
     image: BasicWarrior

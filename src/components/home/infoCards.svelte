@@ -36,6 +36,7 @@
 			<a
 				href={card.path}
 				class="aspect-square flex items-center
+        hover:bg-gray-200
         bg-gray-100 justify-center max-w-sm w-full flex-col gap-7 text-2xl
         p-16 font-extrabold dark:bg-darkmode-200 rounded-lg
         dark:hover:bg-darkmode-300 transition duration-300"
