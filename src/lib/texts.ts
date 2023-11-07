@@ -26,6 +26,59 @@ export const homeMain = {
 	}
 };
 
+export const aboutText = {
+  en: {
+    title: 'Our Story',
+    aboutText: [
+      {
+        time: "February 2020",
+        title: "Company start",
+        text: "With brilliant ideas to pursue, we created company InfinitySights VR, whose goal is to share our techology with whole world."
+      },
+      {
+        time: "March 2021",
+        title: "Product Testing",
+        text: "Public product testing of our VR technologies, meant to showcase capabilities of our company and of our product. It was successfull test."
+      },
+      {
+        time: "April 2022",
+        title: "Global Market",
+        text: "We finally opened our product to the whole world to buy and see for themselves our success with VR technologies."
+      },
+      {
+        time: "May 2023",
+        title: "VR Conference",
+        text: "We were on world famous VR conference nominated as contestants of most successfull VR startup."
+      }
+    ]
+  }
+}
+
+export const servicesText = {
+  en: {
+    title: "Our Services",
+    servicesText: [
+      {
+        title: "Replacing faulty parts",
+        image: "",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        title: "Showcasing how to use VR",
+        image: "",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        title: "Updating the software",
+        image: "",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      }
+    ]
+  }
+}
+
+
+
 export const footerText = {
 	en: {
 		contact: 'Contact',
