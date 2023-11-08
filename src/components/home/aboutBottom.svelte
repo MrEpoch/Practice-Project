@@ -1,4 +1,7 @@
 <script lang="ts">
+  import { lang } from "lib/localStorage";
+  import { aboutHome } from "lib/texts"; 
+
   $: shownAccordion = {
     first: false,
     second: false,
@@ -6,9 +9,11 @@
   }
 </script>
 
+
+
 <div class="w-full pb-32 dark:text-white">
 	<div class="max-w-screen-xl flex items-center flex-col gap-8 justify-center w-full h-full mx-auto p-4">
-    <h3 class="sm:text-4xl text-xl font-bold text-center">Often asked questions</h3>
+    <h3 class="sm:text-4xl text-xl font-bold text-center">{aboutHome[$lang.current].title}</h3>
     <svg
       class="w-32 h-32 mt-16"
 			viewBox="0 0 64 64"
@@ -29,65 +34,63 @@
 					/>
 				</g>
 			</g></svg>
-<div class="w-full" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
-  <h2 id="accordion-flush-heading-1">
-    <button on:click={() => shownAccordion.first = !shownAccordion.first} type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
-      <span>Why choose us?</span>
-      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-      </svg>
-    </button>
-  </h2>
-  {#if shownAccordion.first}
-  <div class="" aria-labelledby="accordion-flush-heading-1">
-    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-      <p class="mb-2 text-gray-500 dark:text-gray-400">
-        Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse 
-          <a class="text-blue-600 dark:text-blue-500 hover:underline" href="/about">exercitation</a>
-          amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id 
-      </p>
-      <p class="text-gray-500 dark:text-gray-400">
-        <a class="dark:text-blue-500 text-blue-600 hover:underline" href="/about">nulla</a> 
-          nisi laboris ex in Lorem sunt duis officia eiusmod. 
-          Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.</p>
+    <div class="w-full" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
+      <h2 id="accordion-flush-heading-1">
+        <button on:click={() => shownAccordion.first = !shownAccordion.first} type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
+          <span>{aboutHome[$lang.current].why.whyTitle}</span>
+          <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+          </svg>
+        </button>
+      </h2>
+      {#if shownAccordion.first}
+      <div class="" aria-labelledby="accordion-flush-heading-1">
+        <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+          <p class="mb-2 text-gray-500 dark:text-gray-400">
+              {aboutHome[$lang.current].why.whyContent1}
+              <a class="text-blue-600 dark:text-blue-500 hover:underline" href="/about">{aboutHome[$lang.current].why.whyLink1}</a>
+              {aboutHome[$lang.current].why.whyContent2}
+          </p>
+          <p class="text-gray-500 dark:text-gray-400">
+            <a class="dark:text-blue-500 text-blue-600 hover:underline" href="/about">{aboutHome[$lang.current].why.whyLink2}</a> 
+            {aboutHome[$lang.current].why.whyContent3}
+        </div>
+      </div>
+      {/if}
+      <h2 id="accordion-flush-heading-2">
+        <button on:click={() => shownAccordion.second = !shownAccordion.second} type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
+          <span>{aboutHome[$lang.current].problem.problemTitle}</span>
+          <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+          </svg>
+        </button>
+      </h2>
+      {#if shownAccordion.second}
+      <div class="" aria-labelledby="accordion-flush-heading-2">
+        <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+          <p class="mb-2 text-gray-500 dark:text-gray-400">{aboutHome[$lang.current].problem.problemContent1}</p>
+          <p class="text-gray-500 dark:text-gray-400">{aboutHome[$lang.current].problem.problemContent2}</p>
+        </div>
+      </div>
+      {/if}
+      <h2 id="accordion-flush-heading-3">
+        <button on:click={() => shownAccordion.third = !shownAccordion.third} type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
+          <span>{aboutHome[$lang.current].more.moreTitle}</span>
+          <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+          </svg>
+        </button>
+      </h2>
+      {#if shownAccordion.third}
+      <div class="" aria-labelledby="accordion-flush-heading-3">
+        <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+          <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
+            <li><a href="/contact" class="text-blue-600 dark:text-blue-500 hover:underline">{aboutHome[$lang.current].more.moreLink1}</a></li>
+            <li><a href="/contact" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">{aboutHome[$lang.current].more.moreLink2}</a></li>
+          </ul>
+        </div>
+      </div>
+      {/if}
     </div>
-  </div>
-  {/if}
-  <h2 id="accordion-flush-heading-2">
-    <button on:click={() => shownAccordion.second = !shownAccordion.second} type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
-      <span>Problem turning module X4?</span>
-      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-      </svg>
-    </button>
-  </h2>
-  {#if shownAccordion.second}
-  <div class="" aria-labelledby="accordion-flush-heading-2">
-    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-      <p class="mb-2 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
-      <p class="text-gray-500 dark:text-gray-400">Aliqua duis aute irure esse consectetur nostrud elit laborum do nisi cillum voluptate incididunt.</p>
-    </div>
-  </div>
-  {/if}
-  <h2 id="accordion-flush-heading-3">
-    <button on:click={() => shownAccordion.third = !shownAccordion.third} type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
-      <span>Is your problem more delicate?</span>
-      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-      </svg>
-    </button>
-  </h2>
-  {#if shownAccordion.third}
-  <div class="" aria-labelledby="accordion-flush-heading-3">
-    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-      <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
-        <li><a href="/contact" class="text-blue-600 dark:text-blue-500 hover:underline">Usage manual</a></li>
-        <li><a href="/contact" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Contact experienced worker</a></li>
-      </ul>
-    </div>
-  </div>
-  {/if}
-</div>
-
 	</div>
 </div>

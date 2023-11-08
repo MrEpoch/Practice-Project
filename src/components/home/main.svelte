@@ -270,11 +270,11 @@
 				<h1
 					class="mb-4 text-center  md:text-4xl break-words sm:text-3xl text-4xl max-[450px]:text-2xl lg:text-5xl font-light tracking-tight leading-none text-gray-900 dark:text-white"
 				>
-					Explore <span
+        {homeMain[$lang.current].title1} <span
 						class="bg-gradient-to-br from-purple-500 to-cyan-600 bg-clip-text text-transparent box-decoration-clone"
-						>VR technologies</span
-					> to the limits
-				</h1>
+						>{homeMain[$lang.current].title2}</span
+          > {homeMain[$lang.current].title3}				
+        </h1>
 			</div>
 			<a
 				href="/pricing"

@@ -1,24 +1,26 @@
 <script lang="ts">
+	import { lang } from 'lib/localStorage';
 	import { BoxIcon, ToolIcon, GlobeIcon, CpuIcon } from 'svelte-feather-icons';
+  import { cardsHomeContent } from 'lib/texts';
 
 	const cardText = [
 		{
-			content: 'VR Technologies',
+      content: cardsHomeContent[$lang.current].vr,
 			svg: CpuIcon,
 			path: '/services'
 		},
 		{
-			content: 'About Us',
+			content:  cardsHomeContent[$lang.current].about,
 			svg: BoxIcon,
 			path: '/about'
 		},
 		{
-			content: 'Recommendations',
+			content: cardsHomeContent[$lang.current].recommendations,
 			svg: GlobeIcon,
 			path: '/pricing'
 		},
 		{
-			content: 'How to use',
+			content: cardsHomeContent[$lang.current].howToUse,
 			svg: ToolIcon,
 			path: '/contact'
 		}

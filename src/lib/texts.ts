@@ -13,7 +13,9 @@ export const headerText = {
 
 export const homeMain = {
 	en: {
-		title: 'Explore VR Technologies to the limits',
+		title1: 'Explore',
+    title2: "VR Technologies",
+    title3: "to the limits",
 		sold: '5K+',
 		soldText: 'Sold',
 		immersion: '100%',
@@ -25,6 +27,40 @@ export const homeMain = {
 		pricingBtn: 'See Pricing'
 	}
 };
+
+
+export const cardsHomeContent = {
+  en: {
+    vr: "VR Technologies",
+    about: "About Us",
+    recommendations: "Recommendations",
+    howToUse: "How to use"
+  }
+}
+
+export const aboutHome = {
+  en: {
+    title: "Often asked questions",
+    why: {
+      whyTitle: "Why choose us?",
+      whyContent1: `Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse`,
+      whyLink1: "exercitation",
+      whyContent2: `amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id`,
+      whyLink2: "nulla",
+      whyContent3: `nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.`
+    },
+    problem: {
+      problemTitle: "Problem turning module X4?",
+      problemContent1: `Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.`,
+      problemContent2: `Aliqua duis aute irure esse consectetur nostrud elit laborum do nisi cillum voluptate incididunt.`
+    },
+    more: {
+      moreTitle: "Is your problem more delicate?",
+      moreLink1: "Usage manual",
+      moreLink2: "Contact worker"
+    }
+  }
+}
 
 export const aboutText = {
   en: {
@@ -53,6 +89,8 @@ export const aboutText = {
     ]
   }
 }
+
+export const serviceText = []
 
 export const servicesText = {
   en: {
