@@ -10,7 +10,7 @@
 	});
 </script>
 
-<div class="min-h-screen w-full py-8 dark:text-white dark:bg-darkmode-500">
+<div class="min-h-screen w-full sm:py-8 dark:text-white dark:bg-darkmode-500">
 	<Main />
 	<InfoCards />
 	<AboutBottom />

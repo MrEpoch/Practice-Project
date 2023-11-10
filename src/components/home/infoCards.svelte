@@ -27,7 +27,7 @@
 	];
 </script>
 
-<div class="min-h-screen flex justify-center w-full">
+<div class="min-h-screen pb-12 flex justify-center w-full">
 	<div
 		class="flex flex-col
         overflow-hidden items-center text-center lg:py-16 sm:grid grid-cols-1 gap-x-6 gap-y-6
@@ -40,7 +40,7 @@
 				class="aspect-square flex items-center
         hover:bg-gray-200
         bg-gray-100 justify-center max-w-sm w-full flex-col gap-7 text-2xl
-        p-16 font-extrabold dark:bg-darkmode-200 rounded-lg
+        p-6 font-extrabold dark:bg-darkmode-200 rounded-lg
         dark:hover:bg-darkmode-300 transition duration-300"
 			>
 				<span

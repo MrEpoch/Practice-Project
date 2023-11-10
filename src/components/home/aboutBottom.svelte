@@ -13,7 +13,7 @@
 
 <div class="w-full pb-32 dark:text-white">
 	<div class="max-w-screen-xl flex items-center flex-col gap-8 justify-center w-full h-full mx-auto p-4">
-    <h3 class="sm:text-4xl text-xl font-bold text-center">{aboutHome[$lang.current].title}</h3>
+    <h3 class="sm:text-4xl text-2xl font-bold text-center">{aboutHome[$lang.current].title}</h3>
     <svg
       class="w-32 h-32 mt-16"
 			viewBox="0 0 64 64"
