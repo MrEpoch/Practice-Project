@@ -39,7 +39,7 @@
 			</button>
 			{#if shownLangs}
 				<div
-					class="z-50 my-4 absolute top-7 text-base list-none divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"
+					class="z-50 bg-gray-50 my-4 absolute top-7 text-base list-none divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"
 					id="language-dropdown-menu"
 				>
 					<ul class="py-2 font-medium" role="none">

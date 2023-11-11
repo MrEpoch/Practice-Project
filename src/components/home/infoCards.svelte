@@ -2,6 +2,14 @@
 	import { lang } from 'lib/localStorage';
 	import { BoxIcon, ToolIcon, GlobeIcon, CpuIcon } from 'svelte-feather-icons';
   import { cardsHomeContent } from 'lib/texts';
+	import { onMount } from 'svelte';
+	import { blur } from 'svelte/transition';
+
+  let animation = false;
+
+  onMount(() => {
+    animation = true;
+  });
 
 	const cardText = [
 		{
@@ -34,21 +42,24 @@
         p-4
         sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-6"
 	>
-		{#each cardText as card}
-			<a
-				href={card.path}
-				class="aspect-square flex items-center
-        hover:bg-gray-200
-        bg-gray-100 justify-center max-w-sm w-full flex-col gap-7 text-2xl
-        p-6 font-extrabold dark:bg-darkmode-200 rounded-lg
-        dark:hover:bg-darkmode-300 transition duration-300"
-			>
-				<span
-					class="bg-gradient-to-br from-purple-400 to-cyan-600 bg-clip-text text-transparent box-decoration-clone"
-					>{card.content}</span
-				>
-				<svelte:component this={card.svg} class="w-16 h-16" />
-			</a>
-		{/each}
+    {#if animation}
+      {#each cardText as card}
+        <a
+          in:blur|global={{ duration: 400 }}
+          href={card.path}
+          class="aspect-square flex items-center
+          hover:bg-gray-200
+          bg-gray-100 justify-center max-w-sm w-full flex-col gap-7 text-2xl
+          p-6 font-extrabold dark:bg-darkmode-200 rounded-lg
+          dark:hover:bg-darkmode-300 transition duration-300"
+        >
+          <span
+            class="bg-gradient-to-br from-purple-400 to-cyan-600 bg-clip-text text-transparent box-decoration-clone"
+            >{card.content}</span
+          >
+          <svelte:component this={card.svg} class="w-16 h-16" />
+        </a>
+      {/each}
+    {/if}
 	</div>
 </div>

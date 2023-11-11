@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { fly, fade } from 'svelte/transition';
+	import { blur, fade } from 'svelte/transition';
 	import { homeMain } from 'lib/texts';
 	import { lang, theme } from 'lib/localStorage';
 
@@ -33,11 +33,11 @@
 	<div class="min-h-screen w-full sm:pb-0  flex gap-5 items-center">
 		<div
 			class={`md:flex flex-col items-center justify-center h-full hidden ${
-				!animate ? 'w-[7rem]' : ''
+				!animate ? 'w-32' : ''
 			}`}
 		>
 			{#if animate}
-				<div in:fly={{}} class="flex gap-8 p-8 mt-28 flex-col">
+				<div in:blur={{}} class="flex gap-8 p-8 mt-28 flex-col">
 					<p class="lg:text-4xl text-2xl flex flex-col font-bold text-center">
 						{cardContent[0].title}
 						<span class="text-xl">{cardContent[0].subtitle}</span>
@@ -300,11 +300,11 @@
 		</div>
 		<div
 			class={`md:flex flex-col items-center justify-center h-full hidden ${
-				!animate ? 'w-[7rem]' : ''
+				!animate ? 'w-[6.3rem]' : ''
 			}`}
 		>
 			{#if animate}
-				<div in:fly={{ x: -100 }} class="flex gap-8 p-8 mt-28 flex-col">
+				<div in:blur class="flex gap-8 p-8 mt-28 flex-col">
 					<p class="lg:text-4xl text-2xl flex flex-col font-bold text-center">
 						{cardContent[2].title}
 						<span class="text-xl">{cardContent[2].subtitle}</span>
